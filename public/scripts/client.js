@@ -16,6 +16,19 @@ myApp.controller( 'SentimentalsController', function( $http ){
             vm.sentimentals = response.data;
         }); //end $http
     }; //end getSentimentals
+
+    vm.hoorayForThis = function( index ){
+        console.log( 'in hooray:', index );
+        $http({
+            method: 'PUT',
+            url: '/sentimentals',
+            data: { index: index }
+        }).then( function( response ){
+            console.log( 'back from put with:', response );
+            vm.getSentimentals();
+        }); // end http
+    }; //end hoorayForThis  
+
     vm.toggleMe = function( index ){
         console.log( 'in toggleMe', index );
         vm.sentimentals[ index ].show = !vm.sentimentals[ index ].show;

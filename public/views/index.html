@@ -14,7 +14,7 @@
         <div ng-repeat='sentimental in SC.sentimentals'>
             <img ng-src='{{ sentimental.image }}' ng-click='SC.toggleMe( $index )' ng-hide='sentimental.show'>
             <p ng-click='SC.toggleMe( $index )' ng-show='sentimental.show'>{{ sentimental.synopsis }}</p>
-            <p>Hoorays: {{ sentimental.hoorays }} <button>Horray for this!</button></p>
+            <p>Hoorays: {{ sentimental.hoorays }} <button ng-click='SC.hoorayForThis( $index )'>Horray for this!</button></p>
         </div>
     </section>
 </body>
