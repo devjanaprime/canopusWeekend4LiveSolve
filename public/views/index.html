@@ -12,8 +12,8 @@
     <h1>Canopus Weekend 4</h1>
     <section ng-controller='SentimentalsController as SC'>
         <div ng-repeat='sentimental in SC.sentimentals'>
-            <img ng-src='{{ sentimental.image }}'>
-            <p>{{ sentimental.synopsis }}</p>
+            <img ng-src='{{ sentimental.image }}' ng-click='SC.toggleMe( $index )' ng-hide='sentimental.show'>
+            <p ng-click='SC.toggleMe( $index )' ng-show='sentimental.show'>{{ sentimental.synopsis }}</p>
             <p>Hoorays: {{ sentimental.hoorays }} <button>Horray for this!</button></p>
         </div>
     </section>

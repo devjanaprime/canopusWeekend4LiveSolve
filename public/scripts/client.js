@@ -16,5 +16,9 @@ myApp.controller( 'SentimentalsController', function( $http ){
             vm.sentimentals = response.data;
         }); //end $http
     }; //end getSentimentals
+    vm.toggleMe = function( index ){
+        console.log( 'in toggleMe', index );
+        vm.sentimentals[ index ].show = !vm.sentimentals[ index ].show;
+    }; //end toggle
     vm.getSentimentals();
 }); // end controller
