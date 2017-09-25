@@ -12,6 +12,8 @@ myApp.controller( 'SentimentalsController', function( $http ){
             url: '/sentimentals'
         }).then( function( response ){
             console.log( 'in getSentimentals:', response );
+            // store array from response in vm.sentimentals
+            vm.sentimentals = response.data;
         }); //end $http
     }; //end getSentimentals
     vm.getSentimentals();
