@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="vendors/angular.min.js"></script>
     <script src='scripts/client.js'></script>
+    <link rel="stylesheet" href="styles/weekend4.css">
     <title>Canopus Weekend 4</title>
 </head>
 <body ng-app='myApp'>
     <h1>Canopus Weekend 4</h1>
     <section ng-controller='SentimentalsController as SC'>
-        <div ng-repeat='sentimental in SC.sentimentals'>
-            <img ng-src='{{ sentimental.image }}' ng-click='SC.toggleMe( $index )' ng-hide='sentimental.show'>
+        <div ng-repeat='sentimental in SC.sentimentals' class='sentimental'>
+            <img ng-src='{{ sentimental.image }}' ng-click='SC.toggleMe( $index )' ng-hide='sentimental.show' class='sentimentalImage'>
             <p ng-click='SC.toggleMe( $index )' ng-show='sentimental.show'>{{ sentimental.synopsis }}</p>
             <p>Hoorays: {{ sentimental.hoorays }} <button ng-click='SC.hoorayForThis( $index )'>Horray for this!</button></p>
         </div>

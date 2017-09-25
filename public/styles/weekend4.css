@@ -1,0 +1,16 @@
+.sentimental{
+    width: 31%;
+    background-color: rgba(93, 113, 230, 0.53);
+    float: left;
+    padding: 6px;
+    margin: 5px;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-radius: 8px;
+}
+
+.sentimentalImage{
+    width: 85%;
+    border: 6px;
+}
